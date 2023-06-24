@@ -16,7 +16,7 @@ The inputs will just get concatenated in the order of the arguments.
 
 I am writing this readme 7 months after I had written the last line of this code, so don't expect it to be complete. Read the [example code at my website](https://www.harmansky.xyz/work/z80/basic_code.zip) instead.
 
-The instruction syntax is the normal z80 syntax. You can use any intentation.
+The instruction syntax is the normal z80 syntax. You can use any indentation.
 Each instruction uses exactly one line. Anything starting with `@` and no space is a macro or a tag, anything starting with `@` and a space after it is a comment
 
 ```
