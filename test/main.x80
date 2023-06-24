@@ -1,0 +1,21 @@
+call main
+
+0x100:
+@function main
+	ld hl, @message
+	call io__puts
+	loop:
+		@ this is how you reference other namespaces
+		call io__getchar
+		call io__putchar
+		@ you can also create unnamed namespaces
+		@scope
+			@ let's do a relative jump:
+			jr {@@loop-@tag}
+			tag:
+		@end
+	ret
+	message:
+		@string {Hello world}
+		byte 0
+@end

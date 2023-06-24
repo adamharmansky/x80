@@ -1,0 +1,15 @@
+@mod io
+	@define key 0x8000
+	@export
+	@function getchar
+		loop:
+			ld a, (@@key)
+			cp 0
+			jp nz, @out_of_loop
+			@ halt while we don't have a character
+			halt
+			jp @loop
+		out_of_loop:
+		ret
+	@end
+@end

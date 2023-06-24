@@ -1,0 +1,23 @@
+@ output functions for the IO module
+@mod io
+	@ prints a character in A
+	@export
+	@function putchar
+		out (1), a
+		ret
+	@end
+
+	@ prints a string pointed to by HL on the output
+	@export
+	@function puts
+		loop:
+			ld a, (hl)
+			cp 0
+			jp z, @out_of_loop
+			push hl
+				call @@putchar
+			pop hl
+			jp @loop
+		out_of_loop:
+	@end
+@end
