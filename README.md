@@ -38,7 +38,7 @@ start:
  * `@scope` creates an anonymous namespace
  * `@end` ends any namespace or function
 
- * `@byte 0xff` inserts a byte at the program counter
+ * `byte 0xff` inserts a byte at the program counter - not a macro, just a zero-length instruction!
  * `@string {hello world}` inserts a string, strings are enclosed in `{}`, escaping with `/` works
 
  * things enclosed in `{}` are expressions, except for `@string`
